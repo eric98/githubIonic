@@ -9,13 +9,19 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {OrganisationsPage} from "../pages/organisations/organisations";
+import {ReposPage} from "../pages/repos/repos";
+import {UsersPage} from "../pages/users/users";
 
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    UsersPage,
+    ReposPage,
+    OrganisationsPage
+    // HelloIonicPage,
+    // ItemDetailsPage,
+    // ListPage
   ],
   imports: [
     BrowserModule,
@@ -24,14 +30,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    UsersPage,
+    ReposPage,
+    OrganisationsPage
+    // HelloIonicPage,
+    // ItemDetailsPage,
+    // ListPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    // SplashScreen,
+    // {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
