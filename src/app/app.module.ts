@@ -12,19 +12,23 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {OrganisationsPage} from "../pages/organisations/organisations";
 import {ReposPage} from "../pages/repos/repos";
 import {UsersPage} from "../pages/users/users";
+import { GithubUsers } from '../providers/github-users/github-users';
+
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     MyApp,
     UsersPage,
     ReposPage,
-    OrganisationsPage
-    // HelloIonicPage,
-    // ItemDetailsPage,
-    // ListPage
+    OrganisationsPage,
+    HelloIonicPage,
+    ItemDetailsPage,
+    ListPage,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -32,15 +36,16 @@ import {UsersPage} from "../pages/users/users";
     MyApp,
     UsersPage,
     ReposPage,
-    OrganisationsPage
-    // HelloIonicPage,
-    // ItemDetailsPage,
-    // ListPage
+    OrganisationsPage,
+    HelloIonicPage,
+    ItemDetailsPage,
+    ListPage,
   ],
   providers: [
     StatusBar,
-    // SplashScreen,
-    // {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GithubUsers,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
