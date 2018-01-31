@@ -12,9 +12,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {OrganisationsPage} from "../pages/organisations/organisations";
 import {ReposPage} from "../pages/repos/repos";
 import {UsersPage} from "../pages/users/users";
-import { GithubUsers } from '../providers/github-users/github-users';
 
 import {HttpClientModule} from "@angular/common/http";
+import { GithubUsers } from '../providers/github-users/github-users';
 
 @NgModule({
   declarations: [
@@ -43,9 +43,9 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   providers: [
     StatusBar,
-    GithubUsers,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GithubUsers,
   ]
 })
 export class AppModule {}

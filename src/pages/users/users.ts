@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { User } from '../../models/user';
-
-import {  GithubUsers } from '../../providers/github-users/github-users';
+import {GithubUsers} from "../../providers/github-users/github-users";
 
 @Component({
   selector: 'page-users',
@@ -14,7 +13,7 @@ export class UsersPage {
 
   constructor(public navCtrl: NavController, private githubUsers: GithubUsers) {
     githubUsers.load().subscribe(users => {
-      console.log(users)
+      this.users = users;
     })
   }
 }
